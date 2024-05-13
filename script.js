@@ -1,4 +1,3 @@
-
 function registerUser() {
     let name, email, password;
 

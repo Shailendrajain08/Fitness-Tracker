@@ -10,7 +10,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="style.css" />
-    <title>Home</title>
+    <title>Work Out</title>
   </head>
   <body>
     <nav class="navbar navbar-default">
@@ -55,16 +55,13 @@
       </div>
     </nav>
 
-    <button onclick="myFunction()">Click Me hide</button>
-    <button onclick="myFunction2()">Click Me show</button>
-
-    <div id="myDIV">This is my DIV element.</div>
+    <div id="app"></div>
   </body>
-  <script src="./scrap item/hideScript.js"></script>
   <script>
     function logout() {
       localStorage.removeItem("name");
       localStorage.removeItem("email");
     }
   </script>
+  <script type="module" src="fitness.js"></script>
 </html>
