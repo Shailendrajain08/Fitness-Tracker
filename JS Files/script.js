@@ -50,3 +50,8 @@ function loginUser() {
     }
 }
 
+function logout() {
+    localStorage.removeItem("name");
+    localStorage.removeItem("email");
+  }
+

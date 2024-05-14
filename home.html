@@ -1,70 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
-    />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="style.css" />
-    <title>Home</title>
-  </head>
-  <body>
-    <nav class="navbar navbar-default">
-      <div class="container-fluid">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-          <a class="navbar-brand" style="color: black" href="#"
-            >Fitness Tracker</a
-          >
-        </div>
 
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="home.html">Goals</a></li>
-            <li><a href="workOut.html">Work Out</a></li>
-            <li><a href="fitnessMoniter.html">Fitness Moniter</a></li>
-            <li class="dropdown">
-              <form class="navbar-form navbar-left">
-                <div class="form-group">
-                  <p>
-                    <b>Name:</b>
-                    <script>
-                      document.write(localStorage.getItem("name"));
-                    </script>
-                  </p>
-                </div>
-                <div class="form-group">
-                  <p>
-                    <b> Email:</b>
-                    <script>
-                      document.write(localStorage.getItem("email"));
-                    </script>
-                  </p>
-                </div>
-                <a href="login.html" class="btn btn-default" onclick="logout()"
-                  >Logout</a
-                >
-              </form>
-            </li>
-          </ul>
-        </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="style.css" />
+  <title>Home</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <a class="navbar-brand" style="color: black" href="#">Fitness Tracker</a>
       </div>
-    </nav>
 
-    <button onclick="myFunction()">Click Me hide</button>
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="home.html">Goals</a></li>
+          <li><a href="workOut.html">Work Out</a></li>
+          <li><a href="fitnessMoniter.html">Fitness Moniter</a></li>
+          <li class="dropdown">
+            <form class="navbar-form navbar-left">
+              <div class="form-group">
+                <p>
+                  <b>Name:</b>
+                  <script>
+                    document.write(localStorage.getItem("name"));
+                  </script>
+                </p>
+              </div>
+              <div class="form-group">
+                <p>
+                  <b> Email:</b>
+                  <script>
+                    document.write(localStorage.getItem("email"));
+                  </script>
+                </p>
+              </div>
+              <a href="login.html" class="btn btn-default" onclick="logout()">Logout</a>
+            </form>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- <button onclick="myFunction()">Click Me hide</button>
     <button onclick="myFunction2()">Click Me show</button>
 
-    <div id="myDIV">This is my DIV element.</div>
-  </body>
-  <script src="./scrap item/hideScript.js"></script>
-  <script>
-    function logout() {
-      localStorage.removeItem("name");
-      localStorage.removeItem("email");
-    }
-  </script>
+    <div id="myDIV">This is my DIV element.</div> -->
+
+  <div id="formDiv">
+    <div class="container" style="margin-top: -2%;">
+      <div class="card">
+        <button type="button" class="btn btn-danger" style="margin-left: 90%;" onclick="hideForm()">Back</button>
+        <h2>Set Your Goal</h2>
+
+        <form action="#" id="myForm">
+          <div class="form-group">
+            <label for="date">Date</label>
+            <input type="date" class="form-control" id="goalDate" name="goalDate"/>
+          </div>
+          <div class="form-group">
+            <label for="excercise">Targeted Activity Name / Excercise</label>
+            <input type="text" class="form-control" id="tExcercise" name="tExcercise" placeholder="Enter Your Target Excersice for today" />
+          </div>
+          <div class="form-group">
+            <label for="Targeted Calories">Targeted Calories Burn</label>
+            <input type="number" class="form-control" id="tCaloriesCount" name="tCaloriesCount" 
+              placeholder="Enter Your Targeted Calories for Today" />
+          </div>
+          <div class="form-group">
+            <label for="Target Step Count">Targeted Step Count</label>
+            <input type="number" class="form-control" id="tStepCount" name="tStepCount" 
+              placeholder="Enter Your Targeted Foot Steps for Today" />
+          </div>
+          <div class="form-group">
+            <label for="Target Workout Time">Targeted Workout Time</label>
+            <input type="number" class="form-control" id="tTime" name="tTime" 
+              placeholder="Enter Your Targeted Workout Time for Today" />
+          </div>
+          <div class="button">
+            <button type="button" class="btn btn-danger" onclick="setGoal()" id="save_btn">
+              Submit
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div id="tableDiv">
+    <button type="button" class="btn brn-danger" style="margin-left: 82.6%; background-color:#FF3B11" onclick="showForm()">Set New Goal</button>
+    <table class="tracker" style="margin-top: 1%;">
+      <thead>
+          <tr>
+              <th>Date</th>
+              <th>Excercise</th>
+              <th>Step Count</th>
+              <th>Calories</th>
+              <th>Time</th>
+          </tr>
+      </thead>
+      <tbody class="goals_entries">
+      </tbody>
+  </table>
+  </div>
+</body>
+<script src="./JS Files/goals.js"></script>
+
 </html>

@@ -49,11 +49,11 @@
     padding: 12px
  }
 
- .tracker_entries .tracker_row{
+ .tracker_entries, .tracker_row{
     background-color: #FFD7CF;
  }
 
- .tracker_entries .tracker_row:nth-child(odd){
+ .tracker_entries, .tracker_row:nth-child(odd){
     background-color: #e7e7e7;
  }
 

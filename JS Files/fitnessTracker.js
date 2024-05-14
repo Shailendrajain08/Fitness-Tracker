@@ -63,6 +63,7 @@ export default class FitnessTracker {
                     <option value="Cardio">Cardio</option>
                     <option value="strangth">Strength</option>
                     <option value="sports">Sports</option>
+                    <option value="gymWorkout">Gym Work Out</option>
                 </select>
             </td>
             <td>
