@@ -50,15 +50,12 @@
     </div>
   </nav>
 
-  <!-- <button onclick="myFunction()">Click Me hide</button>
-    <button onclick="myFunction2()">Click Me show</button>
-
-    <div id="myDIV">This is my DIV element.</div> -->
+  <h3 class="h3">Set Your Todays Goal</h3>
 
   <div id="formDiv">
     <div class="container" style="margin-top: -2%;">
       <div class="card">
-        <button type="button" class="btn btn-danger" style="margin-left: 90%;" onclick="hideForm()">Back</button>
+        <button type="button" class="btn btn-danger" style="margin-left: 90%; background-color:#FF3B11" onclick="hideForm()">Back</button>
         <h2>Set Your Goal</h2>
 
         <form action="#" id="myForm">
@@ -86,7 +83,7 @@
               placeholder="Enter Your Targeted Workout Time for Today" />
           </div>
           <div class="button">
-            <button type="button" class="btn btn-danger" onclick="setGoal()" id="save_btn">
+            <button type="button" class="btn btn-danger" style="background-color:#FF3B11;" onclick="setGoal()" id="save_btn">
               Submit
             </button>
           </div>
@@ -95,7 +92,7 @@
     </div>
   </div>
   <div id="tableDiv">
-    <button type="button" class="btn brn-danger" style="margin-left: 82.6%; background-color:#FF3B11" onclick="showForm()">Set New Goal</button>
+    <button type="button" class="btn btn-danger" style="margin-left: 82.6%; background-color:#FF3B11;" onclick="showForm()">Set New Goal</button>
     <table class="tracker" style="margin-top: 1%;">
       <thead>
           <tr>
@@ -104,12 +101,15 @@
               <th>Step Count</th>
               <th>Calories</th>
               <th>Time</th>
+              <th></th>
           </tr>
       </thead>
       <tbody class="goals_entries">
+
       </tbody>
   </table>
   </div>
+  
 </body>
 <script src="./JS Files/goals.js"></script>
 

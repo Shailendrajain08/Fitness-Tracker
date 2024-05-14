@@ -110,10 +110,16 @@
 .tracker_add{
     display: inline-block;
     padding: 10px 16px;
-    color: green;
+    color: #FF3B11
     cursor: pointer;
 }
 
 .tracker_add:hover {
     background-color: rgba(0,0,0,0.1);    
+}
+
+.h3{
+   color:#FF3B11;
+   text-decoration: underline;
+   text-align: center;
 }

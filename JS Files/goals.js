@@ -67,6 +67,7 @@ function setGoalData() {
       <td>${record.tStepCount} Steps</td>
       <td>${record.tCaloriesCount} Calories</td>
       <td>${record.tTime} Minutes</td>
+      <td><a type="button" class="btn btn-default" style="background-color:#FF3B11" href="./stopWatch.html">Start</a></td>
       </tr>` 
   ))
   goals_entries.innerHTML = elements

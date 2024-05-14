@@ -1,0 +1,1 @@
+user should start the application from index.html file and should file the registration form and then application will move to login after login application will redirect to home section where goals, excersice and fitness all section will appear.
